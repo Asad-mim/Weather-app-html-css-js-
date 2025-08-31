@@ -6,7 +6,7 @@ const searchBtn = document.querySelector(".search button");
 
 async function checkWeather(city){
     const response = await fetch(apiUrl + city + `&appid=${apikey}`);
-    var data = await response.json();
+    let data = await response.json();
     
 
     if (data.cod === "404") {   
@@ -36,3 +36,4 @@ searchBox.addEventListener("keypress", (e) => {
         checkWeather(searchBox.value);
     }
 });
+
