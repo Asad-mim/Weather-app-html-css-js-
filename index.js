@@ -19,7 +19,7 @@ async function checkWeather(city){
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
     document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 
-    var icon = data.weather[0].icon;
+    let icon = data.weather[0].icon;
     document.querySelector(".weather-icon").src =
         "http://openweathermap.org/img/wn/" + icon + "@2x.png";
     document.querySelector(".weather").style.display = "block";
@@ -36,4 +36,5 @@ searchBox.addEventListener("keypress", (e) => {
         checkWeather(searchBox.value);
     }
 });
+
 
